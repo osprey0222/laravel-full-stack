@@ -1,18 +1,40 @@
 {
-    "private": true,
-    "scripts": {
-        "dev": "npm run development",
-        "development": "mix",
-        "watch": "mix watch",
-        "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
-        "prod": "npm run production",
-        "production": "mix --production"
-    },
-    "devDependencies": {
-        "axios": "^0.25",
-        "laravel-mix": "^6.0.6",
-        "lodash": "^4.17.19",
-        "postcss": "^8.1.14"
-    }
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.16.7",
+    "@tailwindcss/forms": "^0.5.1",
+    "axios": "^0.25",
+    "laravel-mix": "^6.0.6",
+    "lodash": "^4.17.19",
+    "postcss": "^8.1.14",
+    "react": "^18.1.0",
+    "tailwindcss": "^3.0.24"
+  },
+  "name": "html",
+  "description": "7CS069: Web Technologies - University module educating me to build modern web applications, including HTML5, CSS3, React.JS, PHP and Web Services.",
+  "version": "1.0.0",
+  "main": "webpack.mix.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rawlsy-py/7CS069_Web_Technologies.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rawlsy-py/7CS069_Web_Technologies/issues"
+  },
+  "homepage": "https://github.com/Rawlsy-py/7CS069_Web_Technologies#readme"
 }
