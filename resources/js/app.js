@@ -13,4 +13,4 @@ require('./bootstrap');
  */
 
 require('./components/Navbar');
-
+require('./components/Header');
