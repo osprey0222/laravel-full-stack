@@ -44,6 +44,7 @@
     "homepage": "https://github.com/Rawlsy-py/7CS069_Web_Technologies#readme",
     "dependencies": {
         "@headlessui/react": "^1.6.2",
-        "@heroicons/react": "^1.0.6"
+        "@heroicons/react": "^1.0.6",
+        "scss": "^0.2.4"
     }
 }
