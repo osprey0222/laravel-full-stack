@@ -1,22 +1,7 @@
-/*
-  This example requires Tailwind CSS v2.0+
-
-  This example requires some changes to your config:
-
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
-*/
+import React from 'react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
-export default function Example() {
+const Header = () => {
     return (
         <div className="bg-gray-800">
             <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:flex lg:justify-between">
@@ -58,3 +43,5 @@ export default function Example() {
         </div>
     )
 }
+
+export default Header
