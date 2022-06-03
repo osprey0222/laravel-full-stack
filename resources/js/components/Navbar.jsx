@@ -2,6 +2,7 @@ import React from 'react'
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Link } from 'react-router-dom'
 
 const navigation = [
     { name: 'Dashboard', href: '#', current: true },
@@ -14,7 +15,8 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-const Navbar = () => {
+const Navbar = (props) => {
+
     return (
         <Disclosure as="nav" className="bg-gray-800">
             {({ open }) => (
@@ -47,7 +49,14 @@ const Navbar = () => {
                                 </div>
                                 <div className="hidden sm:block sm:ml-6">
                                     <div className="flex space-x-4">
-                                        {navigation.map((item) => (
+                                        {props.links.map((link, index) => (
+                                            <Link
+                                                key={index}
+                                                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                                                to={link.path}>{link.name}</Link>
+                                        ))}
+
+                                        {/* {navigation.map((item) => (
                                             <a
                                                 key={item.name}
                                                 href={item.href}
@@ -59,7 +68,7 @@ const Navbar = () => {
                                             >
                                                 {item.name}
                                             </a>
-                                        ))}
+                                        ))} */}
                                     </div>
                                 </div>
                             </div>
