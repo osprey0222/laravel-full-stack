@@ -4,16 +4,37 @@ const Footer = () => {
     return (
         <footer className="bg-white">
             <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
-                <div className="flex justify-center space-x-6 md:order-2">
-                    {navigation.map((item) => (
-                        <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">
-                            <span className="sr-only">{item.name}</span>
-                            <item.icon className="h-6 w-6" aria-hidden="true" />
-                        </a>
-                    ))}
-                </div>
+                <div className="flex justify-center space-x-6 md:order-2"></div>
                 <div className="mt-8 md:mt-0 md:order-1">
-                    <p className="text-center text-base text-gray-400">&copy; 2020 Workflow, Inc. All rights reserved.</p>
+                    <p className="text-center text-base leading-6 text-gray-500">
+                        &copy; 2020 Tamworth Spartans Volleyball Club. All rights reserved.
+                    </p>
+                </div>
+                {/* Social Links */}
+                <div className="mt-8 md:mt-0 md:order-3">
+                    <p className="text-center text-base leading-6 text-gray-500">
+                        <a href="https://www.facebook.com/tamworthspartans/" className="text-gray-500 hover:text-gray-700">
+                            <span className="sr-only">Facebook</span>
+                            <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    fillRule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                    clipRule="evenodd"
+                                />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/tamworthspartans/" className="text-gray-500 hover:text-gray-700">
+                            <span className="sr-only">Instagram</span>
+                            <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    fillRule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.092.06 1.845.276 2.218.552.463.278.856.65 1.132 1.132.374.558.622 1.225.552 2.218.056 1.023.06 1.358.06 3.808s-.013 2.784-.06 3.808c-.06 1.092-.276 1.845-.552 2.218-.278.463-.65.856-1.132 1.132-.558.374-1.225.622-2.218.552-1.023.056-1.358.06-3.808.06s-2.784-.013-3.808-.06c-1.092-.06-1.845-.276-2.218-.552-.463-.278-.856-.65-1.132-1.132-.374-.558-.622-1.225-.552-2.218-.056-1.023-.06-1.358-.06-3.808s.013-2.784.06-3.808c.06-1.092.276-1.845.552-2.218.278-.463.65-.856 1.132-1.132.558-.374 1.225-.622 2.218-.552 1.023-.056 1.358-.06 3.808-.06zm0 4.5c-2.43 0-2.784-.013-3.808-.06-1.092-.06-1.845-.276-2.218-.552-.463-.278-.856-.65-1.132-1.132-.374-.558-.622-1.225-.552-2.218-.056-1.023-.06-1.358-.06-3.808s.013-2.784.06-3.808c.06-1.092.276-1.845.552-2.218.278-.463.65-.856 1.132-1.132.558-.374 1.225-.622 2.218-.552 1
+                                    .056 1.358.06 3.808.06s2.784-.013 3.808-.06c1.092-.06 1.845-.276 2.218-.552.463-.278.856-.65 1.132-1.132.374-.558.622-1.225.552-2.218.056-1.023.06-1.358.06-3.808s-.013-2.784-.06-3.808c-.06-1.092-.276-1.845-.552-2.218-.278-.463-.65-.856-1.132-1.132-.558-.374-1.225-.622-2.218-.552-1.023-.056-1.358-.06-3.808-.06s-2.784.013-3.808.06c-1.092.06-1.845.276-2.218.552-.463.278-.856.65-1.132 1.132-.374.558-.622 1.225-.552 2.218-.056 1.023-.06 1.358-.06 3.808s.013 2.784.06 3.808c.06 1.092.276 1.845.552 2.218.278.463.65.856 1.132 1.132.558.374 1.225.622 2.218.552 1.023.056 1.358.06 3.808.06zm0-1.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"
+                                    clipRule="evenodd"
+                                />
+                            </svg>
+                        </a>
+                    </p>
                 </div>
             </div>
         </footer>
