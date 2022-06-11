@@ -13,7 +13,7 @@ const Header = () => {
                         Local volleyball club for the Tamworth area.
                     </p>
                 </div>
-                <div className="mt-10 w-full max-w-xs">
+                {/* <div className="mt-10 w-full max-w-xs">
                     <label htmlFor="PastEvents" className="block text-base font-medium text-gray-300">
                         Past Events
                     </label>
@@ -28,7 +28,7 @@ const Header = () => {
                             <ChevronDownIcon className="h-5 w-5" />
                         </div>
                     </div>
-                </div>
+                </div>*/}
             </div>
         </div>
     )

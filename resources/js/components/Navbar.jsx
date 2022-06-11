@@ -56,7 +56,7 @@ const Navbar = (props) => {
                                                 to={link.path}>{link.name}</Link>
                                         ))}
 
-                                        {/* {navigation.map((item) => (
+                                        {navigation.map((item) => (
                                             <a
                                                 key={item.name}
                                                 href={item.href}
@@ -68,7 +68,7 @@ const Navbar = (props) => {
                                             >
                                                 {item.name}
                                             </a>
-                                        ))} */}
+                                        ))}
                                     </div>
                                 </div>
                             </div>
