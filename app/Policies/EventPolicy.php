@@ -5,6 +5,7 @@ namespace App\Policies;
 use App\Models\Event;
 use App\Models\User;
 use Illuminate\Auth\Access\HandlesAuthorization;
+use Illuminate\Auth\Access\Response;
 
 class EventPolicy
 {
@@ -18,7 +19,7 @@ class EventPolicy
      */
     public function viewAny(User $user)
     {
-        //
+        return Response::allow();
     }
 
     /**
@@ -30,7 +31,7 @@ class EventPolicy
      */
     public function view(User $user, Event $event)
     {
-        //
+        return Response::allow();
     }
 
     /**
@@ -41,7 +42,11 @@ class EventPolicy
      */
     public function create(User $user)
     {
-        //
+        if (!auth()->check()) {
+            return Response::deny('You must be logged in to create an event.');
+        }
+
+        return Response::allow();
     }
 
     /**
@@ -53,7 +58,11 @@ class EventPolicy
      */
     public function update(User $user, Event $event)
     {
-        //
+        if (!auth()->check()) {
+            return Response::deny('You must be logged in to update an event.');
+        }
+
+        return Response::allow();
     }
 
     /**
@@ -65,7 +74,11 @@ class EventPolicy
      */
     public function delete(User $user, Event $event)
     {
-        //
+        if (!auth()->check()) {
+            return Response::deny('You must be logged in to delete an event.');
+        }
+
+        return Response::allow();
     }
 
     /**
@@ -77,7 +90,7 @@ class EventPolicy
      */
     public function restore(User $user, Event $event)
     {
-        //
+        return Response::allow();
     }
 
     /**
@@ -89,6 +102,10 @@ class EventPolicy
      */
     public function forceDelete(User $user, Event $event)
     {
-        //
+        if (!auth()->check()) {
+            return Response::deny('You must be logged in to delete an event.');
+        }
+
+        return Response::allow();
     }
 }

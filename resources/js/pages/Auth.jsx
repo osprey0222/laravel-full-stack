@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import useLocalStorage from '../hooks/useLocalStorage'
 
 const Auth = () => {
     const [data, setData] = useState({
@@ -6,19 +7,13 @@ const Auth = () => {
         password: 'password',
     })
 
-    const [login, setLogin] = useState()
-    const [id, setId] = useState(null)
+    const [login, setLogin] = useLocalStorage('login_status', true)
+    const [id, setId] = useLocalStorage('current_id_events', 1)
     const [createData, setCreateData] = useState({
         title: '',
         content: '',
     })
-    const [events, setEvents] = useState([])
-
-    useEffect(() => {
-        localStorage.getItem('events') && setEvents(JSON.parse(localStorage.getItem('events')))
-
-        localStorage.getItem('id') && setId(JSON.parse(localStorage.getItem('id')))
-    }, [])
+    const [events, setEvents] = useLocalStorage('events_store', [])
 
     const submit = (e) => {
         e.preventDefault()
@@ -40,7 +35,6 @@ const Auth = () => {
             ...data,
             [event.target.name]: event.target.value
         })
-        console.log(data)
     }
 
     const create = (e) => {
@@ -56,7 +50,7 @@ const Auth = () => {
         // })
 
         const newEvent = {
-            id: id || 1,
+            id: id,
             title: createData.title,
             content: createData.content,
         }
@@ -67,8 +61,6 @@ const Auth = () => {
         ])
 
         setId(id + 1)
-
-        localStorage.setItem('events', JSON.stringify(events))
     }
 
     const onHandleCreateDataChange = (event) => {

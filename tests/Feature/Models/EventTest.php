@@ -8,15 +8,24 @@ use Tests\TestCase;
 
 class EventTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
-    public function test_example()
+    public function test_can_fill_model()
     {
-        $response = $this->get('/');
+        $event = new \App\Models\Event();
 
-        $response->assertStatus(200);
+        $event->fill([
+            'title' => 'Evento de teste',
+            'description' => 'Descrição do evento de teste',
+            'starts_at' => '2018-01-01 12:00:00',
+            'ends_at' => '2018-01-01 13:00:00',
+            'location' => [
+                'name' => 'Nome do local',
+                'address' => 'Endereço do local',
+                'number' => 'Número do local',
+            ],
+            'event_type_id' => 1,
+        ]);
+
+        $this->assertEquals('Evento de teste', $event->title);
+        $this->assertEquals('Descrição do evento de teste', $event->description);
     }
 }

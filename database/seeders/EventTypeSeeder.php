@@ -14,6 +14,23 @@ class EventTypeSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $eventTypes = [
+            [
+                'name' => 'League Match',
+            ],
+            [
+                'name' => 'Friendly Match',
+            ],
+            [
+                'name' => 'Tournament',
+            ],
+            [
+                'name' => 'Other',
+            ],
+        ];
+
+        foreach ($eventTypes as $eventType) {
+            \App\Models\EventType::create($eventType);
+        }
     }
 }

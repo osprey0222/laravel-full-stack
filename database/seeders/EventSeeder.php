@@ -14,6 +14,6 @@ class EventSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Event::factory()->count(10)->create();
     }
 }

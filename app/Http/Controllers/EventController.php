@@ -15,7 +15,11 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        $events = Events::get();
+
+        return response()->json([
+            'data' => $events,
+        ]);
     }
 
     /**
@@ -26,7 +30,19 @@ class EventController extends Controller
      */
     public function store(StoreEventRequest $request)
     {
-        //
+        if (auth()->user()->cannot('create', Event::class)) {
+            return response()->json([
+                'message' => 'You are not authorized to create an event.',
+            ], 403);
+        }
+
+        $validated = $request->validated();
+
+        $event = Event::create($validated);
+
+        return response()->json([
+            'data' => $event,
+        ]);
     }
 
     /**
@@ -37,7 +53,9 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        //
+        return response()->json([
+            'data' => $event,
+        ]);
     }
 
     /**
@@ -49,7 +67,19 @@ class EventController extends Controller
      */
     public function update(UpdateEventRequest $request, Event $event)
     {
-        //
+        if (auth()->user()->cannot('update', $event)) {
+            return response()->json([
+                'message' => 'You are not authorized to update this event.',
+            ], 403);
+        }
+
+        $validated = $request->validated();
+
+        $event->update($validated);
+
+        return response()->json([
+            'data' => $event,
+        ]);
     }
 
     /**
@@ -60,6 +90,16 @@ class EventController extends Controller
      */
     public function destroy(Event $event)
     {
-        //
+        if (auth()->user()->cannot('delete', $event)) {
+            return response()->json([
+                'message' => 'You are not authorized to delete this event.',
+            ], 403);
+        }
+
+        $event->delete();
+
+        return response()->json([
+            'data' => $event,
+        ]);
     }
 }
