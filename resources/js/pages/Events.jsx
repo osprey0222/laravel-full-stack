@@ -7,7 +7,42 @@ const Events = () => {
                 <h3>Events</h3>
                 {/* lorem ipsum with white text */}
                 <div className="text-white text-center md:text-left">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus dolorum quas illum cum ipsa aliquam nam iure provident magnam perferendis impedit voluptas, nesciunt laudantium corrupti quibusdam minima iste quaerat? Nam!</p>
+                    <p>
+
+                        Men's NVL fixtures
+
+
+
+                        Sat 02/10/2021
+                        Tamworth Spartans Men v York VC
+
+                        Sun 17/10/2021
+                        Tamworth Spartans Men v Leicester Volleyball Club
+
+                        Sun 24/10/2021
+                        Tamworth Spartans Men v Hull Thunder Men
+
+                        Sun 31/10/2021
+                        Tamworth Spartans Men v Sheffield Men 2
+
+                        Sun 21/11/2021
+                        Tamworth Spartans Men v Black Country Men
+
+                        Sat 27/11/2021
+                        York VC v Tamworth Spartans Men
+
+                        Sun 19/12/2021
+                        Liverpool VC Men v Tamworth Spartans Men
+
+                        Sun 16/01/2022
+                        Tamworth Spartans Men v Liverpool VC Men
+
+                        Sun 23/01/2022
+                        Hull Thunder Men v Tamworth Spartans Men
+
+                        Sat 12/02/2022
+                        Sheffield Men 2 v Tamworth Spartans Men
+                    </p>
                 </div>
             </div>
         </div>
